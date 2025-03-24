@@ -8,6 +8,7 @@ X_train_flattened = reshape(X_train, 28*28, 60000); % X_train: (28*28, 60000)
 X_test_flattened = reshape(X_test, 28*28, 10000); % X_test: (28*28, 10000)
 X_comb = [X_train_flattened,X_test_flattened]; % X_comb: (28*28, 70000)
 Y_comb = [Y_train ,Y_test]; % Y_comb: (1, 70000). Here the Y_comb with number from 0-9 
+Y_MNIST_T_test = Y_test(1:5000);
 
 X_test_T = X_test_flattened(:, 1:5000); % Coresponds with the papaer MNIST-T
 n = size(X_test_T,2);  % Number of samples
@@ -77,7 +78,7 @@ end
 % disp(Y);
 
 max_iters = 500;  % 设置最大迭代次数
-epsilon = 1e-6;  % 设定收敛阈值
+epsilon = 1e-4;  % 设定收敛阈值
 prev_loss = inf; % 记录上一次损失值
 iter_number = 0;
 for iter = 1:max_iters
@@ -105,7 +106,7 @@ for iter = 1:max_iters
 end
 
 I_approx = R' * R;
-Y_MNIST_T_test = Y_test(1:5000);
+
 cost_matrix = calculate_cost_matrix(Y, Y_MNIST_T_test,c);
 [assignment, cost] = munkres(-cost_matrix);
 
