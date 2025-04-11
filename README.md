@@ -22,3 +22,8 @@ The main clustering process is demonstrated in `main_JAFFE.m`, which serves as a
 ```matlab
 % Example:
 main_JAFFE.m
+
+## Dependencies
+MATLAB ≥ R2020b
+
+Statistics and Machine Learning Toolbox
