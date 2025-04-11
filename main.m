@@ -1,18 +1,38 @@
 addpath('./functions');
 
-% 加载 USPS 数据
-% [X_train, Y_train, X_test, Y_test] = loadUSPS('./USPS/usps.h5');
+% Load USPS data
+%[X_train, Y_train, X_test, Y_test] = loadUSPS('./USPS/usps.h5');
 % X_comb = [X_train, X_test];  % 合并数据
 % Y_comb = [Y_train, Y_test];  % 合并标签
+% Load USPS data
+
 
 % Load JAFFE data 
-addpath('./functions');
-[X_comb, ~, Y_comb, ~] = loadJAFFE('./jaffe');
-% 参数设置
+load('JAFFE.mat');
+X_comb =  X_JAFFE;
+Y_comb = Y_JAFFE;
+Y_comb = Y_comb-1;
+% Load JAFFE data
+
+% Load MNIST-T data
+%dataPath = './MNIST/raw/';
+
+% Load MNIST-T data
+%[X_train, Y_train, X_test, Y_test] = loadMNIST(dataPath);
+
+
+%X_train_flattened = reshape(X_train, 28*28, 60000); % X_train: (28*28, 60000)
+%X_test_flattened = reshape(X_test, 28*28, 10000); % X_test: (28*28, 10000)
+
+%Y_comb = Y_test(1:5000);
+%X_comb = X_test_flattened(:, 1:5000); % Coresponds with the papaer MNIST-T
+% Load MNIST-T data
+
+
 c = 10;          % 聚类数量
 k = 5;           % 局部邻域大小
 lambda_list = [1e-8, 1e-6, 1e-4, 1e-2, 1, 1e2, 1e4, 1e6, 1e8];  % 待测试的 lambda 值
-output_dir = './Experiment_data/JAFFE';  % 结果保存目录
+output_dir = './Experiment_data/MNIST_T_test';  % 结果保存目录
 mkdir(output_dir);  % 创建文件夹（如果不存在）
 
 % 循环测试每个 lambda
