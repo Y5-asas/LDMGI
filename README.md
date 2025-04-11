@@ -31,7 +31,7 @@ cd LDMGI
 
 Preprocess datasets into `(X, Y)` format using provided scripts:
 
-- `loadJAFFE.m`: Loads JAFFE facial expression images and labels.
+- `loadMNIST.m`: Loads MNIST handwritten digits.
 - `loadUSPS.m`: Loads USPS handwritten digits.
 - Other datasets: See `./functions/`.
 
