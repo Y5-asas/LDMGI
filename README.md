@@ -48,7 +48,7 @@ Y_comb = Y_comb-1; % Every label should be transfer into 0~(c-1) for further dat
 
 #### **Single Dataset Example (JAFFE)**
 
-Edit and run `main_JAFFE.m`:
+Edit and run `main.m`:
 
 ```matlab
 % Parameters
