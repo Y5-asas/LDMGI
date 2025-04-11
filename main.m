@@ -28,6 +28,14 @@ Y_comb = Y_comb-1;
 %X_comb = X_test_flattened(:, 1:5000); % Coresponds with the papaer MNIST-T
 % Load MNIST-T data
 
+% Load COIL20 data
+% dataPath = 'COIL20';
+
+% [X_comb, Y_comb] = loadCOIL20(dataPath);
+% Y_comb = Y_comb-1;
+
+% Load COIL20 data
+
 
 c = 10;          % 聚类数量
 k = 5;           % 局部邻域大小
