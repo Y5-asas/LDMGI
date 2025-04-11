@@ -52,7 +52,7 @@ Edit and run `main.m`:
 
 ```matlab
 % Parameters
-c = 10;                 % Corresponds to the number of cluster of your dataset
+c = 10;                 % Corresponds to the number of classes of your dataset
 k = 5;                 % Neighborhood size
 lambda_list = [1e-8, 1e-6, 1e-4, 1e-2, 1, 1e2, 1e4, 1e6, 1e8];  
 
