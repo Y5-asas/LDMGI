@@ -67,7 +67,7 @@ end
 
 Therefore, by applying the shape of this **X : (m, n)**, where m denotes the feature space and n denotes the number of samples, **Y = (1, n)**. You can use LDMGI for any dataset.
 
-However, in our test, we have found that the computation time is highly related to the size of Lagrangian: (n, n). We recommend a largest data size is ~7000.    
+However, in our test, we have found that the computation time is highly related to the size of Lagrangian: (n, n). We recommend the largest data size is ~7000.    
 
 ### **4. Outputs**
 
