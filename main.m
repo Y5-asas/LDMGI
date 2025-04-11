@@ -32,7 +32,7 @@ Y_comb = Y_comb-1;
 c = 10;          % 聚类数量
 k = 5;           % 局部邻域大小
 lambda_list = [1e-8, 1e-6, 1e-4, 1e-2, 1, 1e2, 1e4, 1e6, 1e8];  % 待测试的 lambda 值
-output_dir = './Experiment_data/MNIST_T_test';  % 结果保存目录
+output_dir = './Experiment_data/JAFFE';  % 结果保存目录
 mkdir(output_dir);  % 创建文件夹（如果不存在）
 
 % 循环测试每个 lambda
