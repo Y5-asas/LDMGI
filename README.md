@@ -69,6 +69,9 @@ Therefore, by applying the shape of this **X : (m, n)**, where m denotes the fea
 
 However, in our test, we have found that the computation time is highly related to the size of Lagrangian: (n, n). We recommend the largest data size is ~7000.    
 
+In addition to running the main clustering function `ldmgi_clustering`, this project also supports running alternative methods such as `diskmeans_clustering`, `ncut_clustering`, and `llc_gaussian_clustering` for comparative experiments. These functions are provided in the `./functions/` folder.
+
+
 ### **4. Outputs**
 
 - **Results**: Saved in `./Experiment_data/DATASET_NAME/` (e.g., `Y_JAFFE_lambda_1e4.mat`).
